@@ -3,101 +3,625 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>株式会社レアスリー | 医療関係ツール販売</title>
+    <title>株式会社レアスリー | 医療DXで、働く人を救う</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <!-- Header -->
-    <header class="header">
-        <div class="container">
+    <header class="header" id="header">
+        <div class="header-inner">
             <div class="logo">
-                <h1>株式会社レアスリー</h1>
-                <p class="tagline">医療関係ツール販売</p>
+                <span class="logo-mark">L3</span>
+                <div class="logo-text">
+                    <span class="logo-name">株式会社レアスリー</span>
+                    <span class="logo-sub">Leathree Inc.</span>
+                </div>
             </div>
             <nav class="nav">
-                <a href="#about">会社情報</a>
-                <a href="#business">事業内容</a>
+                <a href="#challenge">医療現場の課題</a>
+                <a href="#solution">ソリューション</a>
+                <a href="#service">サービス</a>
                 <a href="#message">代表メッセージ</a>
-                <a href="#contact">お問い合わせ</a>
+                <a href="#company">会社情報</a>
+                <a href="#contact" class="nav-cta">お問い合わせ</a>
             </nav>
+            <button class="hamburger" id="hamburger" aria-label="メニュー">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobileNav">
+        <a href="#challenge" class="mobile-link">医療現場の課題</a>
+        <a href="#solution" class="mobile-link">ソリューション</a>
+        <a href="#service" class="mobile-link">サービス</a>
+        <a href="#message" class="mobile-link">代表メッセージ</a>
+        <a href="#company" class="mobile-link">会社情報</a>
+        <a href="#contact" class="mobile-link">お問い合わせ</a>
+    </div>
+
+    <!-- Hero -->
     <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2>クライアントへの圧倒的貢献<br>社会貢献と還元を信念に</h2>
-                <p>3方良しの経営を心がけています</p>
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <p class="hero-label">Medical DX × AI</p>
+            <h1 class="hero-title">
+                医療の働き方を、<br>
+                AIで根本から変える。
+            </h1>
+            <p class="hero-desc">
+                医師・看護師・リハビリ職の業務負担を軽減し、<br class="pc-only">
+                患者に向き合える時間を創出する。<br>
+                それが私たちレアスリーの使命です。
+            </p>
+            <div class="hero-btns">
+                <a href="#solution" class="btn btn-primary">ソリューションを見る</a>
+                <a href="#contact" class="btn btn-outline">お問い合わせ</a>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat">
+                <span class="stat-num" data-target="40">0</span><span class="stat-unit">%</span>
+                <span class="stat-label">業務時間削減</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+                <span class="stat-num" data-target="3">0</span><span class="stat-unit">倍</span>
+                <span class="stat-label">教育効率向上</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+                <span class="stat-num" data-target="24">0</span><span class="stat-unit">h</span>
+                <span class="stat-label">AIサポート稼働</span>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- Challenge Section -->
+    <section id="challenge" class="challenge section">
         <div class="container">
-            <h2>会社情報</h2>
-            <div class="company-info">
-                <div class="info-item">
-                    <h3>会社名</h3>
-                    <p>株式会社レアスリー</p>
+            <div class="section-label">CHALLENGE</div>
+            <h2 class="section-title">医療現場が抱える<br>深刻な課題</h2>
+            <p class="section-desc">
+                日本の医療従事者は深刻な人手不足と業務過多に直面しています。<br>
+                2024年の医師の働き方改革以降も、構造的な問題は解決されていません。
+            </p>
+
+            <div class="challenge-grid">
+                <div class="challenge-card">
+                    <div class="challenge-icon">🏥</div>
+                    <div class="challenge-tag doctor">医師</div>
+                    <h3>膨大な書類・記録業務</h3>
+                    <p>診察時間の約<strong>30〜40%</strong>が電子カルテ入力・書類作成に費やされており、患者と向き合う時間が慢性的に不足しています。</p>
+                    <div class="challenge-bar">
+                        <div class="bar-label"><span>患者対応</span><span>60%</span></div>
+                        <div class="bar-track"><div class="bar-fill" style="width:60%; background:#4a90e2;"></div></div>
+                        <div class="bar-label"><span>書類・記録</span><span>40%</span></div>
+                        <div class="bar-track"><div class="bar-fill" style="width:40%; background:#e05a5a;"></div></div>
+                    </div>
                 </div>
-                <div class="info-item">
-                    <h3>代表取締役</h3>
-                    <p>片岡哲也</p>
+
+                <div class="challenge-card">
+                    <div class="challenge-icon">💉</div>
+                    <div class="challenge-tag nurse">看護師</div>
+                    <h3>引き継ぎ・情報伝達の負担</h3>
+                    <p>シフト交代時の申し送り、複数患者の状態管理、多職種連携など、<strong>情報の整理と伝達</strong>に多大な時間とエネルギーが奪われています。</p>
+                    <div class="challenge-bar">
+                        <div class="bar-label"><span>直接ケア</span><span>45%</span></div>
+                        <div class="bar-track"><div class="bar-fill" style="width:45%; background:#4a90e2;"></div></div>
+                        <div class="bar-label"><span>記録・情報共有</span><span>35%</span></div>
+                        <div class="bar-track"><div class="bar-fill" style="width:35%; background:#e05a5a;"></div></div>
+                        <div class="bar-label"><span>その他</span><span>20%</span></div>
+                        <div class="bar-track"><div class="bar-fill" style="width:20%; background:#aaa;"></div></div>
+                    </div>
                 </div>
-                <div class="info-item">
-                    <h3>資本金</h3>
-                    <p>500万円</p>
+
+                <div class="challenge-card">
+                    <div class="challenge-icon">🦾</div>
+                    <div class="challenge-tag rehab">リハビリ</div>
+                    <h3>専門教育・知識更新の困難さ</h3>
+                    <p>新人教育やスキルアップに十分な時間が取れず、エビデンスに基づく最新知識の習得が困難な状況が続いています。<strong>OJT依存</strong>が教育品質のバラつきを生んでいます。</p>
+                    <div class="challenge-bar">
+                        <div class="bar-label"><span>患者リハビリ</span><span>55%</span></div>
+                        <div class="bar-track"><div class="bar-fill" style="width:55%; background:#4a90e2;"></div></div>
+                        <div class="bar-label"><span>記録・報告書</span><span>30%</span></div>
+                        <div class="bar-track"><div class="bar-fill" style="width:30%; background:#e05a5a;"></div></div>
+                        <div class="bar-label"><span>教育・学習</span><span>15%</span></div>
+                        <div class="bar-track"><div class="bar-fill" style="width:15%; background:#f5a623;"></div></div>
+                    </div>
                 </div>
-                <div class="info-item">
-                    <h3>事業内容</h3>
-                    <p>医療関係ツール販売</p>
+            </div>
+
+            <div class="challenge-summary">
+                <div class="summary-item">
+                    <span class="summary-num">約960億円</span>
+                    <span class="summary-text">医師の時間外労働による経済的損失（年間推計）</span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-num">13万人不足</span>
+                    <span class="summary-text">2030年に予測される看護師不足数</span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-num">3年以内に離職</span>
+                    <span class="summary-text">新卒リハビリ職の約3割が経験</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Business Section -->
-    <section id="business" class="business">
+    <!-- Solution Section -->
+    <section id="solution" class="solution section bg-dark">
         <div class="container">
-            <h2>事業内容</h2>
-            <p>医療現場の課題解決を目指し、革新的なツールの開発・販売を行っています。</p>
-            <p>クライアントの信頼と満足度を最優先に、高品質なソリューションを提供いたします。</p>
+            <div class="section-label light">SOLUTION</div>
+            <h2 class="section-title light">AIが、医療の現場を<br>変える3つの柱</h2>
+            <p class="section-desc light">
+                レアスリーは医療現場に特化したAIツールで、<br>
+                「記録」「連携」「教育」の三領域から働き方を革新します。
+            </p>
+
+            <div class="solution-tabs">
+                <button class="tab-btn active" data-tab="record">記録・書類の自動化</button>
+                <button class="tab-btn" data-tab="connect">多職種連携の強化</button>
+                <button class="tab-btn" data-tab="edu">教育・スキルアップ</button>
+            </div>
+
+            <div class="tab-content active" id="tab-record">
+                <div class="solution-card-big">
+                    <div class="solution-visual">
+                        <div class="ai-flow">
+                            <div class="flow-item flow-in">
+                                <div class="flow-icon">🎙️</div>
+                                <div class="flow-text">音声入力<br>・診察内容<br>・指示内容</div>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-item flow-ai">
+                                <div class="flow-icon">🤖</div>
+                                <div class="flow-text">AI処理<br>・文字起こし<br>・構造化</div>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-item flow-out">
+                                <div class="flow-icon">📄</div>
+                                <div class="flow-text">自動生成<br>・カルテ記載<br>・サマリー</div>
+                            </div>
+                        </div>
+                        <div class="time-save-box">
+                            <span class="save-num">▼ 1日あたり</span>
+                            <span class="save-big">2〜3時間</span>
+                            <span class="save-label">の記録時間を削減</span>
+                        </div>
+                    </div>
+                    <div class="solution-text">
+                        <h3>AI音声入力×自動カルテ生成</h3>
+                        <p>診察中の会話をリアルタイムでAIが解析し、SOAPフォーマットや診療録形式に自動変換。タイピング不要で、医師・看護師の記録時間を大幅に削減します。</p>
+                        <ul class="feature-list">
+                            <li>診察音声からカルテ草案を自動生成</li>
+                            <li>処置指示・投薬記録の音声入力対応</li>
+                            <li>退院サマリー・紹介状の下書き自動作成</li>
+                            <li>リハビリ記録・経過報告書の自動テンプレート化</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">詳細を問い合わせる</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="tab-connect">
+                <div class="solution-card-big">
+                    <div class="solution-visual">
+                        <div class="connect-diagram">
+                            <div class="connect-center">患者情報<br>AI統合ハブ</div>
+                            <div class="connect-role role-dr">医師</div>
+                            <div class="connect-role role-ns">看護師</div>
+                            <div class="connect-role role-pt">リハビリ</div>
+                            <div class="connect-role role-ph">薬剤師</div>
+                            <div class="connect-role role-sw">SW・MSW</div>
+                        </div>
+                        <div class="time-save-box">
+                            <span class="save-num">▼ 申し送り時間</span>
+                            <span class="save-big">60%短縮</span>
+                            <span class="save-label">多職種情報共有の効率化</span>
+                        </div>
+                    </div>
+                    <div class="solution-text">
+                        <h3>AI多職種連携プラットフォーム</h3>
+                        <p>医師・看護師・リハビリ・薬剤師など多職種の情報をAIが統合・整理し、シフト交代時の申し送りや多職種カンファレンスの準備を自動化します。</p>
+                        <ul class="feature-list">
+                            <li>患者状態サマリーの自動生成・共有</li>
+                            <li>申し送りチェックリストのAI自動作成</li>
+                            <li>多職種カンファレンス議事録の自動記録</li>
+                            <li>アラート・タスク管理の一元化</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">詳細を問い合わせる</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="tab-edu">
+                <div class="solution-card-big">
+                    <div class="solution-visual">
+                        <div class="edu-levels">
+                            <div class="edu-level">
+                                <span class="level-tag">新人</span>
+                                <span class="level-bar" style="width:30%"></span>
+                                <span class="level-after">AIで基礎習得 ▲2倍速</span>
+                            </div>
+                            <div class="edu-level">
+                                <span class="level-tag">中堅</span>
+                                <span class="level-bar" style="width:60%"></span>
+                                <span class="level-after">症例学習・試験対策 ▲3倍速</span>
+                            </div>
+                            <div class="edu-level">
+                                <span class="level-tag">ベテラン</span>
+                                <span class="level-bar" style="width:85%"></span>
+                                <span class="level-after">最新ガイドライン即時反映</span>
+                            </div>
+                        </div>
+                        <div class="time-save-box">
+                            <span class="save-num">▼ 教育コスト</span>
+                            <span class="save-big">50%削減</span>
+                            <span class="save-label">AIチュータリングで個別最適化</span>
+                        </div>
+                    </div>
+                    <div class="solution-text">
+                        <h3>AIチュータリング×臨床教育支援</h3>
+                        <p>医療職向けに特化したAIが、個人の習熟度に合わせた学習プランを提供。症例シミュレーション・最新ガイドライン解説・国家試験対策まで、24時間365日対応します。</p>
+                        <ul class="feature-list">
+                            <li>個人レベルに合わせた症例トレーニング</li>
+                            <li>最新ガイドライン・エビデンスの即時参照</li>
+                            <li>実技手順のAI動画解説・フィードバック</li>
+                            <li>スタッフ全体の習熟度の可視化・管理</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">詳細を問い合わせる</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="impact section">
+        <div class="container">
+            <div class="section-label">IMPACT</div>
+            <h2 class="section-title">導入で変わる<br>医療現場の数字</h2>
+
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-icon">⏰</div>
+                    <h3>業務時間の削減</h3>
+                    <div class="chart-compare">
+                        <div class="chart-col">
+                            <div class="chart-bar-wrap">
+                                <div class="chart-bar before" style="height:200px;">
+                                    <span>8h</span>
+                                </div>
+                            </div>
+                            <p class="chart-label before-label">導入前</p>
+                        </div>
+                        <div class="chart-col">
+                            <div class="chart-bar-wrap">
+                                <div class="chart-bar after" style="height:120px;">
+                                    <span>5h</span>
+                                </div>
+                            </div>
+                            <p class="chart-label after-label">導入後</p>
+                        </div>
+                    </div>
+                    <p class="impact-note">医師1人あたりの記録・書類対応時間（1日平均）</p>
+                </div>
+
+                <div class="impact-card">
+                    <div class="impact-icon">📊</div>
+                    <h3>職員満足度の向上</h3>
+                    <div class="gauge-wrap">
+                        <svg viewBox="0 0 200 120" class="gauge-svg">
+                            <path d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="#e0e0e0" stroke-width="18" stroke-linecap="round"/>
+                            <path d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="url(#gaugeGrad)" stroke-width="18" stroke-linecap="round" stroke-dasharray="251" stroke-dashoffset="50" class="gauge-fill"/>
+                            <defs>
+                                <linearGradient id="gaugeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#4a90e2"/>
+                                    <stop offset="100%" style="stop-color:#00c6a2"/>
+                                </linearGradient>
+                            </defs>
+                            <text x="100" y="88" text-anchor="middle" font-size="32" font-weight="bold" fill="#003d7a">82%</text>
+                            <text x="100" y="110" text-anchor="middle" font-size="11" fill="#666">職員満足度スコア</text>
+                        </svg>
+                    </div>
+                    <p class="impact-note">AI導入後、職員の「働き続けたい」意欲が大幅に向上</p>
+                </div>
+
+                <div class="impact-card">
+                    <div class="impact-icon">🎓</div>
+                    <h3>新人の習熟スピード</h3>
+                    <div class="speed-bars">
+                        <div class="speed-row">
+                            <span class="speed-label">従来の教育</span>
+                            <div class="speed-track">
+                                <div class="speed-fill conventional" style="width:40%"></div>
+                            </div>
+                            <span class="speed-val">6ヶ月</span>
+                        </div>
+                        <div class="speed-row highlight">
+                            <span class="speed-label">AI教育支援</span>
+                            <div class="speed-track">
+                                <div class="speed-fill ai-powered" style="width:100%"></div>
+                            </div>
+                            <span class="speed-val">2ヶ月</span>
+                        </div>
+                    </div>
+                    <p class="impact-note">一人前になるまでの期間を最大3分の1に短縮</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Section -->
+    <section id="service" class="service section bg-light">
+        <div class="container">
+            <div class="section-label">SERVICE</div>
+            <h2 class="section-title">サービスラインアップ</h2>
+            <p class="section-desc">
+                医療機関の規模・課題に合わせて、<br>
+                柔軟にカスタマイズして提供します。
+            </p>
+
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="service-badge">導入実績No.1</div>
+                    <div class="service-icon-wrap" style="background:#e8f0fe;">
+                        <span class="service-icon">🎙️</span>
+                    </div>
+                    <h3>LeaDoc<br><small>AI音声カルテ支援</small></h3>
+                    <p>診察・処置・回診の音声をリアルタイムに構造化し、電子カルテへ自動入力。医師・看護師の記録業務を劇的に削減。</p>
+                    <div class="service-tags">
+                        <span>医師向け</span><span>看護師向け</span>
+                    </div>
+                </div>
+
+                <div class="service-card featured">
+                    <div class="service-badge featured-badge">おすすめ</div>
+                    <div class="service-icon-wrap" style="background:#e6f7f2;">
+                        <span class="service-icon">🔗</span>
+                    </div>
+                    <h3>LeaLink<br><small>多職種連携AIプラットフォーム</small></h3>
+                    <p>患者情報を多職種でリアルタイム共有。申し送り・カンファレンス準備をAIが自動化し、チーム医療の質を高めます。</p>
+                    <div class="service-tags">
+                        <span>全職種向け</span><span>病棟向け</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon-wrap" style="background:#fef3e8;">
+                        <span class="service-icon">📚</span>
+                    </div>
+                    <h3>LeaLearn<br><small>AI臨床教育プラットフォーム</small></h3>
+                    <p>新人から専門職まで、習熟度別のAIチュータリングを提供。最新エビデンスへのアクセスと、症例シミュレーションで実践力を養成。</p>
+                    <div class="service-tags">
+                        <span>リハビリ向け</span><span>新人教育</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon-wrap" style="background:#fce8f3;">
+                        <span class="service-icon">📈</span>
+                    </div>
+                    <h3>LeaAnalytics<br><small>医療経営DXダッシュボード</small></h3>
+                    <p>病院・クリニックの業務データをAIで分析・可視化。スタッフ配置最適化、稼働率分析、収益改善提案まで一括対応。</p>
+                    <div class="service-tags">
+                        <span>管理職向け</span><span>経営層向け</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-flow">
+                <h3>導入までの流れ</h3>
+                <div class="flow-steps">
+                    <div class="flow-step">
+                        <div class="step-num">01</div>
+                        <div class="step-content">
+                            <h4>無料相談・ヒアリング</h4>
+                            <p>現場の課題を詳しくお聞きし、最適なプランをご提案します</p>
+                        </div>
+                    </div>
+                    <div class="flow-arrow-h">→</div>
+                    <div class="flow-step">
+                        <div class="step-num">02</div>
+                        <div class="step-content">
+                            <h4>トライアル導入</h4>
+                            <p>30日間の無料トライアルで効果を実感いただけます</p>
+                        </div>
+                    </div>
+                    <div class="flow-arrow-h">→</div>
+                    <div class="flow-step">
+                        <div class="step-num">03</div>
+                        <div class="step-content">
+                            <h4>カスタマイズ</h4>
+                            <p>貴院の電子カルテ・業務フローに合わせて調整します</p>
+                        </div>
+                    </div>
+                    <div class="flow-arrow-h">→</div>
+                    <div class="flow-step">
+                        <div class="step-num">04</div>
+                        <div class="step-content">
+                            <h4>本格運用・サポート</h4>
+                            <p>専任担当が継続的にサポート。定期的に改善提案を行います</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Message Section -->
-    <section id="message" class="message">
+    <section id="message" class="message section">
         <div class="container">
-            <h2>代表メッセージ</h2>
-            <div class="message-content">
-                <div class="message-image">
-                    <img src="ceo-photo.png" alt="代表取締役 片岡哲也">
+            <div class="section-label">MESSAGE</div>
+            <h2 class="section-title">代表メッセージ</h2>
+            <div class="message-layout">
+                <div class="message-photo-col">
+                    <div class="photo-frame">
+                        <img src="ceo-photo.png" alt="代表取締役 片岡哲也">
+                    </div>
+                    <div class="ceo-profile">
+                        <p class="ceo-title">代表取締役</p>
+                        <p class="ceo-name">片岡 哲也</p>
+                        <p class="ceo-roman">Tetsuya Kataoka</p>
+                    </div>
                 </div>
-                <div class="message-text">
-                    <h3>代表取締役　片岡哲也</h3>
-                    <p>医療の現場で働く皆様が、より良いサービスを提供できるよう、私たちは最高品質のツールを開発・提供することをお約束します。</p>
-                    <p>クライアントへの圧倒的貢献、社会貢献と還元を信念として、すべてのステークホルダーにとって価値のある「3方良し」の経営を心がけています。</p>
+                <div class="message-body">
+                    <h3>「現場を知っているからこそ、<br>本当に使えるツールを届けたい」</h3>
+                    <p>医療の現場では、懸命に患者のために働く医師・看護師・リハビリの専門家たちが、本来の仕事とは異なる「書類業務」「情報伝達」「教育の非効率さ」によって疲弊しています。</p>
+                    <p>AIは今、医療の未来を変えるほどの力を持っています。しかしその力は、現場の実態を深く理解した者が設計しなければ、真の変化をもたらすことはできません。</p>
+                    <p>私たちレアスリーは、医療従事者の働く環境をテクノロジーで根本から変えることを使命としています。クライアントへの圧倒的貢献、社会貢献と還元を信念とし、患者・医療従事者・社会—すべての人にとって良い「三方良し」の経営を目指しています。</p>
+                    <p>医療が持続可能であり続けるために、私たちは動き続けます。</p>
+                    <div class="message-signature">
+                        <span>株式会社レアスリー　代表取締役　</span>
+                        <strong>片岡 哲也</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Section -->
+    <section id="company" class="company section bg-light">
+        <div class="container">
+            <div class="section-label">COMPANY</div>
+            <h2 class="section-title">会社情報</h2>
+
+            <div class="company-layout">
+                <table class="company-table">
+                    <tbody>
+                        <tr>
+                            <th>会社名</th>
+                            <td>株式会社レアスリー（Leathree Inc.）</td>
+                        </tr>
+                        <tr>
+                            <th>代表取締役</th>
+                            <td>片岡 哲也</td>
+                        </tr>
+                        <tr>
+                            <th>設立</th>
+                            <td>2025年</td>
+                        </tr>
+                        <tr>
+                            <th>資本金</th>
+                            <td>500万円</td>
+                        </tr>
+                        <tr>
+                            <th>事業内容</th>
+                            <td>医療関係AIツールの開発・販売・コンサルティング</td>
+                        </tr>
+                        <tr>
+                            <th>法人番号</th>
+                            <td>9040001134157</td>
+                        </tr>
+                        <tr>
+                            <th>対象顧客</th>
+                            <td>病院・クリニック・介護施設・医療系スタートアップ</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="vision-box">
+                    <h3>Our Vision</h3>
+                    <p class="vision-statement">「すべての医療従事者が、<br>本来の仕事に集中できる社会へ」</p>
+                    <div class="values">
+                        <div class="value-item">
+                            <span class="value-icon">🎯</span>
+                            <div>
+                                <strong>圧倒的貢献</strong>
+                                <p>クライアントの課題を自分事として捉え、期待を超える成果を届けます</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <span class="value-icon">🌏</span>
+                            <div>
+                                <strong>社会貢献と還元</strong>
+                                <p>医療従事者の働き方改革を通じて、持続可能な医療社会を実現します</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <span class="value-icon">⚖️</span>
+                            <div>
+                                <strong>三方良し</strong>
+                                <p>患者・医療従事者・社会すべてにとって価値ある経営を貫きます</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact section bg-dark">
         <div class="container">
-            <h2>お問い合わせ</h2>
-            <p>ツールのご導入やご相談はお気軽にお問い合わせください。</p>
-            <div class="contact-methods">
-                <div class="contact-item">
-                    <h3>メール</h3>
-                    <p><a href="mailto:info@reasthree.jp">info@reasthree.jp</a></p>
+            <div class="section-label light">CONTACT</div>
+            <h2 class="section-title light">お問い合わせ</h2>
+            <p class="section-desc light">
+                まずは無料相談から。<br>
+                貴院の課題に合わせた最適なプランをご提案します。
+            </p>
+
+            <div class="contact-layout">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <h4>メールでのお問い合わせ</h4>
+                            <a href="mailto:info@leathree.co.jp">info@leathree.co.jp</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h4>お電話でのお問い合わせ</h4>
+                            <a href="tel:0312345678">03-XXXX-XXXX</a>
+                            <p class="contact-hours">平日 9:00〜18:00</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🗓️</div>
+                        <div>
+                            <h4>無料デモ・相談会</h4>
+                            <p>オンライン対応可。お気軽にご予約ください。</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="contact-item">
-                    <h3>電話</h3>
-                    <p><a href="tel:0312345678">03-XXXX-XXXX</a></p>
-                </div>
+
+                <form class="contact-form" onsubmit="return false;">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>お名前 <span class="required">*</span></label>
+                            <input type="text" placeholder="片岡 哲也">
+                        </div>
+                        <div class="form-group">
+                            <label>医療機関名</label>
+                            <input type="text" placeholder="〇〇病院 / 〇〇クリニック">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>メールアドレス <span class="required">*</span></label>
+                        <input type="email" placeholder="example@hospital.jp">
+                    </div>
+                    <div class="form-group">
+                        <label>ご興味のあるサービス</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label"><input type="checkbox"> LeaDoc（AI音声カルテ）</label>
+                            <label class="checkbox-label"><input type="checkbox"> LeaLink（多職種連携）</label>
+                            <label class="checkbox-label"><input type="checkbox"> LeaLearn（AI教育）</label>
+                            <label class="checkbox-label"><input type="checkbox"> LeaAnalytics（経営DX）</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>お問い合わせ内容</label>
+                        <textarea rows="4" placeholder="ご質問・ご要望をお気軽にご記入ください"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">送信する</button>
+                </form>
             </div>
         </div>
     </section>
@@ -105,8 +629,92 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 株式会社レアスリー. All rights reserved.</p>
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <span class="logo-mark small">L3</span>
+                    <div>
+                        <span class="footer-name">株式会社レアスリー</span>
+                        <span class="footer-en">Leathree Inc.</span>
+                    </div>
+                </div>
+                <nav class="footer-nav">
+                    <a href="#challenge">医療現場の課題</a>
+                    <a href="#solution">ソリューション</a>
+                    <a href="#service">サービス</a>
+                    <a href="#message">代表メッセージ</a>
+                    <a href="#company">会社情報</a>
+                    <a href="#contact">お問い合わせ</a>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 株式会社レアスリー. All rights reserved.</p>
+            </div>
         </div>
     </footer>
+
+    <script>
+    // Header scroll
+    window.addEventListener('scroll', () => {
+        const header = document.getElementById('header');
+        header.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        mobileNav.classList.toggle('open');
+    });
+    document.querySelectorAll('.mobile-link').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('open');
+            mobileNav.classList.remove('open');
+        });
+    });
+
+    // Tabs
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+        });
+    });
+
+    // Counter animation
+    function animateCounter(el) {
+        const target = parseInt(el.dataset.target);
+        let current = 0;
+        const step = target / 60;
+        const timer = setInterval(() => {
+            current += step;
+            if (current >= target) {
+                current = target;
+                clearInterval(timer);
+            }
+            el.textContent = Math.floor(current);
+        }, 20);
+    }
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                animateCounter(e.target);
+                observer.unobserve(e.target);
+            }
+        });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.stat-num').forEach(el => observer.observe(el));
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+            e.preventDefault();
+            const target = document.querySelector(a.getAttribute('href'));
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
+    </script>
 </body>
 </html>

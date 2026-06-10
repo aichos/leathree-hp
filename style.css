@@ -765,6 +765,11 @@ ul { list-style: none; }
     gap: 64px;
     align-items: start;
 }
+.contact-layout.single {
+    grid-template-columns: 1fr;
+    max-width: 720px;
+    margin: 0 auto;
+}
 .contact-info { display: flex; flex-direction: column; gap: 32px; }
 .contact-item { display: flex; gap: 16px; align-items: flex-start; }
 .contact-icon { font-size: 24px; flex-shrink: 0; }
